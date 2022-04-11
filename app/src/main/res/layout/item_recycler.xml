@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="text"
+            type="String" />
+        <variable
+            name="isClicked"
+            type="Boolean" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@{isClicked ? @color/active : @color/inactive}"
+            tools:text="Tesla"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:text="@{text}"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+    </FrameLayout>
+</layout>
